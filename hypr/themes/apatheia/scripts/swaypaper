@@ -1,0 +1,21 @@
+#!/bin/sh
+
+WALLP1 = $HOME/.config/hypr/themes/apatheia/wallpapers/Planet.png
+WALLP2 = $HOME/.config/hypr/themes/apatheia/wallpapers/o8o22e7f45h91.webp
+
+killall swaybg
+
+sleep 1
+
+### IMAGES ###
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/Planet.png &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/PandaSamurai.webp &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/GreenGlass.webp &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/tits.png &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/tits_inv.png &
+swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/background1.png &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/background1inv.png &
+# swaybg -m fill -i $HOME/.config/hypr/themes/apatheia/wallpapers/tits2.png &
+
+# ### COLORS ###
+# swaybg -c "#F22555" & # just a dark color (obsidian color..)
