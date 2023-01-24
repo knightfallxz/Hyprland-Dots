@@ -7,7 +7,8 @@
     "cpu",
     "memory",
     "temperature",
-    "battery"
+    "battery",
+    "custom/weather"
   ],
   "modules-center": ["custom/playerctl"],
   "modules-right": ["tray", "network", "pulseaudio", "backlight", "clock"],
@@ -93,8 +94,11 @@
     "reverse-direction": true,
     "spacing": 6
   },
-  "sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	}
+ "custom/weather" : {
+        "tooltip" : true,
+        "format" : "{}",
+        "restart-interval" : 300,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+  }
 }

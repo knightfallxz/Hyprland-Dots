@@ -91,6 +91,9 @@ tooltip label {
 #backlight {
   color: rgb(248, 189, 150);
 }
+#custom-weather {
+  color :rgb(248 , 189, 150);
+}
 #pulseaudio {
   color: rgb(245, 224, 220);
 }
