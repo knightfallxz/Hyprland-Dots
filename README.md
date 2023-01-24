@@ -7,13 +7,13 @@
 
 <br/>
 
- # ** The Ghost **
+ # The Ghost 
  
 ![screen_2](/assets/swappy-20230124_190918.png) 
  
 ![image](https://user-images.githubusercontent.com/107239398/214392260-ff9cafe5-1910-40e8-822d-348ce57115c3.png)
  
- # ** The Fall **
+ # The Fall 
  
 ![screen_1](/assets/ImagesShowcase.png)
    
