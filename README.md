@@ -9,7 +9,7 @@
 
 ![screen_1](/assets/ImagesShowcase.png)
 
-![screen_2](/assets/ImageShowcase2.png) 
+![screen_2](/assets/swappy-20230124_190918.png) 
  
 </div>
 
