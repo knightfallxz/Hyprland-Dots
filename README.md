@@ -9,6 +9,8 @@
 
 ![screen_1](/assets/ImagesShowcase.png)
 
+![screen_2](/assets/ImageShowcase2.png) 
+ 
 </div>
 
 # Details
