@@ -1,0 +1,31 @@
+*{
+  all:unset;
+  font-family: Ubuntu Mono Nerd Font;
+  color: #dddddd;
+  font-size:20px;
+}
+
+.bar {
+	background-color: transparent;
+}
+
+.main-container {
+  padding:8px 12px;
+  background-color: #010101;
+  border-radius: 12px;
+  margin: 3px 3px 0 3px;
+}
+
+.workspaces {
+  margin-left: -6px;
+  padding-left:0px;
+}
+
+
+.time {
+  background: transparent;
+}
+
+.systray{
+  padding-right:8px;
+}
