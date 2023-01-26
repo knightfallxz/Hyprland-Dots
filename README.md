@@ -9,7 +9,7 @@
 
  # The Ghost 
  
-![screen_2](/assets/swappy-20230124_190918.png) 
+![image](https://user-images.githubusercontent.com/107239398/214760985-49abe680-e4b7-4099-a440-86ff07c2121e.png)
  
 ![image](https://user-images.githubusercontent.com/107239398/214392260-ff9cafe5-1910-40e8-822d-348ce57115c3.png)
  
