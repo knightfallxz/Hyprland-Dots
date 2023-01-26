@@ -1,0 +1,35 @@
+    ##START THEMING BAR
+    #Theme name : ArcoLinux Noclue
+
+    # i3 bar colors
+    # variable border background Text
+
+    colors {
+        background #2F2F2F
+        statusline #DAD58B
+        separator  #666666
+
+        # colorclass           border  backgr. text
+        focused_workspace     #333333 #DAD58B #000000
+        active_workspace      #333333 #222222 #aaaaaa
+        inactive_workspace    #333333 #222222 #aaaaaa
+        urgent_workspace      #a9a9a9 #d42121 #FFFFFF
+        }
+
+    }
+    ##STOP THEMING BAR
+
+    ##START THEMING WM
+    #Theme name : ArcoLinux Noclue
+
+    # Window color settings
+    # class                 border  backgr. text    indicator
+    client.focused          #DAD58B #DAD58B #000000 #DAD58B
+    client.unfocused        #DAAE8B #DAAE8B #000000 #DAAE8B
+    client.focused_inactive #DAAE8B #DAAE8B #000000 #DAAE8B
+    client.placeholder      #DAAE8B #DAAE8B #000000 #DAAE8B
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+
+    client.background       #242424
+
+    ##STOP THEMING WM

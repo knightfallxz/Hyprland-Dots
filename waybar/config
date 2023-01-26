@@ -1,0 +1,92 @@
+{
+  "layer": "top",
+    "height": 10,
+    "modules-left": ["custom/arch", "cpu", "memory", "temperature", "custom/info-cava"],
+    "modules-center": ["custom/playerctl"],
+    "modules-right": ["backlight","pulseaudio", "battery", "tray", "network","clock"],
+    "custom/arch": {
+      "format": "  ",
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "wlr/workspaces": {
+      "format": "{name}",
+      "on-click": "activate",
+      "all-outputs": true
+    },
+    "clock": {
+      "format": "<span color='#e0282c'> </span>{:%H:%M}",
+      "format-alt": "<span foreground='#e0282c'> </span><span>{:%I:%M %p %a %d}</span>",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "backlight": {
+      "device": "amdgpu_b10",
+      "format": "<span color='#e0282c'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/sound": {
+      "format": "<span color='#e0282c'> </span>{}",
+      "exec": "custom-alsa.sh",
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#e0282c'> </span>{essid}({signalStrength}%)",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#e0282c'>󰖪 </span>No Network",
+      "on-click": "kitty nmtui"
+    },
+    "battery": {
+      "format": "<span color='#e0282c'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#e0282c'></span> {capacity}%"
+    },
+    "pulseaudio": {
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "format": "<span color='#e0282c'></span> {volume}%",
+      "format-muted": "<span color='#e0282c'>ﱝ</span>",
+      "format-icons": {
+       "headphone": "",
+       "hands-free": "",
+       "headset": "",
+       "phone": "",
+       "portable": "",
+       "car": "",
+       "default": ["奔", "墳"]
+    },
+    "on-click-right" : "pavucontrol"
+    },
+    "memory": {
+    "format": "<span foreground='#e0282c'></span> {}%",
+    "on-click": "kitty htop"
+    },
+    "tray": {
+    "icon-size": 20,
+    "reverse-direction": true,
+    "spacing": 6
+    },
+    "cpu": {
+    "format": "<span foreground='#e0282c'></span>  {usage}%"
+     },
+     "temperature": {
+    "critical-threshold": 80,
+    "format": "<span foreground='#e0282c'></span> {temperatureC}°C"
+     },
+     "custom/info-cava" : {
+    "format": "{icon}",
+    "exec": "/home/knightfall/.trash/polybar/scripts/info-cava.py -f 60 -b 30 -c stereo" 
+     },
+    "custom/playerctl": {
+     "format": "{icon}  <span>{}</span>",
+     "return-type": "json",
+     "max-length": 55,
+     "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+     "on-click-middle": "playerctl previous",
+     "on-click": "playerctl play-pause",
+     "on-click-right": "playerctl next",
+     "format-icons": {
+       "Paused": "<span foreground='#e0282c'></span>",
+       "Playing": "<span foreground='#e0282c'></span>"
+     }
+     }
+
+}

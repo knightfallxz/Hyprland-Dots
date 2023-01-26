@@ -1,0 +1,171 @@
+;; string literal widgets as variables are possible but not efficient
+
+;; seperate sidebar for each possible primary monitor
+(defwindow sidebar0
+  :geometry (geometry
+    :x "0px"
+    :width "1px"
+    ; :height "100%"
+  :anchor "top left")
+  :stacking "fg"
+  :monitor 0
+  (sidebar))
+
+(defwindow sidebar1
+  :geometry (geometry
+    :x "0px"
+    :width "1px"
+    ; :height "100%"
+  :anchor "top left")
+  :stacking "fg"
+  :monitor 1
+  (sidebar))
+
+(defwindow sidebar2
+  :geometry (geometry
+    :x "0px"
+    :width "1px"
+    ; :height "100%"
+  :anchor "top left")
+  :stacking "fg"
+  :monitor 2
+  (sidebar))
+
+
+(defwidget sidebar []
+  (eventbox
+    :halign "start"
+    :onhover "${EWW_CMD} update side=true"
+    :onhoverlost "${EWW_CMD} update side=false"
+    (revealer
+      :transition "slideright"
+      :reveal side
+      :duration "550ms"
+      (side))))
+(defvar side false)
+
+;; background
+(defwidget side []
+  (box
+    :class "side"
+    :orientation "v"
+    :space-evenly "false"
+    :spacing "15"
+    :vexpand "true"
+    (top)
+    (music-side)
+    (sys-tray)
+    ; (clipboard)
+    (bottom))
+)
+
+(defwidget top []
+  (box
+    :orientation "h"
+    :space-evenly "false"
+    :halign "fill"
+    :hexpand "true"
+    (apatheia)
+  )
+)
+
+(defwidget bottom []
+  (box
+    :orientation "h"
+    :space-evenly "false"
+    :spacing "15"
+    (buttons)
+    (fetch)
+  )
+)
+
+(defwidget buttons []
+  (box
+    :class "buttons"
+    :orientation "v"
+    :space-evenly "true"
+    :halign "fill"
+    :valign "fill"
+    :spacing "10"
+    (button
+      :class "poweroff"
+      :halign "center"
+      :valign "center"
+      :tooltip "Shut Down"
+    :onclick "kitty poweroff &" "⏻")
+    (button
+      :class "reboot"
+      :halign "center"
+      :valign "center"
+      :tooltip "Reboot"
+    :onclick "kitty reboot &" "")
+    (button
+      :class "exit"
+      :halign "center"
+      :valign "center"
+      :tooltip "Quit Hyprland"
+    :onclick "hyprctl dispatch exit exit" "")
+    (button
+      :class "firmware"
+      :halign "center"
+      :valign "center"
+      :tooltip "Reboot to EFI"
+    :onclick "kitty systemctl reboot --firmware &" "⏼")
+    (button
+      :class "restart"
+      :halign "center"
+      :valign "center"
+      :tooltip "edit Config"
+    :onclick "kitty vim ~/.config/hypr/hyprland.conf &" "﨣")))
+
+(defpoll uptime :interval "1m" "uptime -p | sed -e 's/up //;s/ hours,/h/;s/ minutes/m/'")
+(defpoll packages :interval "5m" `pacman -Q | wc -l`)
+(defpoll kernal :interval "5m" `uname -r`)
+(defpoll name :interval "5m" `whoami`)
+(defpoll host :interval "5m" `uname -n`)
+(defpoll wm :interval "5m" `echo $XDG_CURRENT_DESKTOP`)
+
+(defwidget fetch []
+  (box
+    :class "fetch"
+    :space-evenly "false"
+    :halign "fill"
+    :valign "fill"
+    :hexpand "true"
+    :spacing "10"
+    (box
+      :orientation "v"
+      (label
+        :limit-width 20
+        :class "host"
+        :valign "center"
+        :halign "start"
+        :vexpand "true"
+      :text " : ${name}@${host}")
+      (label
+        :class "wm"
+        :valign "center"
+        :halign "start"
+        :vexpand "true"
+      :text " : ${wm}")
+      (label
+        :class "uptime"
+        :valign "center"
+        :halign "start"
+        :vexpand "true"
+      :text " : ${uptime}")
+      (label
+        :class "packages"
+        :valign "center"
+        :halign "start"
+        :vexpand "true"
+      :text " : ${packages}")
+      (label
+        :class "kernal"
+        :valign "center"
+        :halign "start"
+        :vexpand "true"
+      :text " : ${kernal}")
+    )
+  )
+)

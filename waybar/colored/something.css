@@ -1,0 +1,156 @@
+@define-color bg-hover #1A1A28;
+@define-color bg #1E1E2E;
+@define-color blue #89B4FA;
+@define-color sky #89DCEB;
+@define-color red #F38BA8;
+@define-color pink #F5C2E7;
+@define-color lavender #B4BEFE;
+@define-color rosewater #F5E0DC;
+@define-color flamingo #F2CDCD;
+@define-color fg #D9E0EE;
+@define-color green #A6E3A1;
+@define-color dark-fg #161320;
+@define-color peach #FAB387;
+@define-color border @lavender;
+@define-color gray2 #6E6C7E;
+@define-color black4 #575268;
+@define-color black3 #302D41;
+@define-color maroon #EBA0AC;
+
+* {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  font-family: "SF Pro", "JetBrainsMono Nerd Font";
+  font-size: 12pt;
+  padding-bottom: 1px;
+}
+
+tooltip {
+  background: @bg;
+  border-radius: 7px;
+  border: 2px solid @border;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @lavender;
+}
+
+window#waybar.solo {
+  background-color: @bg;
+  color: @lavender;
+}
+
+window#waybar.solo #workspaces button {
+  border-radius: 5px;
+}
+
+#custom-arch-pill {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 7px;
+  background-color: @lavender;
+  color: @dark-fg;
+}
+
+#mode {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  background-color: @bg;
+  color: @peach;
+}
+
+#tray {
+  margin: 5px 0 5px 5px;
+  padding-left: 10px;
+  border-radius: 7px 0 0 7px;
+  background-color: @bg;
+}
+
+#network {
+  margin: 5px 5px 5px 0;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 0 7px 7px 0;
+  background-color: @bg;
+  color: @lavender;
+}
+/* #network.wifi, */
+/* #network.ethernet { */
+/*   color: @green; */
+/* } */
+#network.linked {
+  color: @peach;
+}
+#network.disconnected,
+#network.disabled {
+  color: @red;
+}
+
+#pulseaudio,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#battery {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 7px;
+  color: @lavender;
+  background-color: @bg;
+}
+
+#custom-playerctl {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  color: @lavender;
+  background-color: @bg;
+}
+
+#pulseaudio.muted {
+  background-color: @red;
+  color: @dark-fg;
+}
+
+#clock {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  color: @lavender;
+  background-color: @bg;
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: #fdf6e3;
+}
+#workspaces button.focused {
+	color: #268bd2;
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+#workspaces button:hover {
+	background: #1a1a1a;
+	border: #1a1a1a;
+	padding: 0 3px;
+}
+
+#custom-weather {
+    border-radius: 0px 10px 10px 0px;
+    border-right: 0px;
+    margin-left: 0px;
+  }
+
+/* bottom waybar */
+

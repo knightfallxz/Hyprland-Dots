@@ -1,0 +1,16 @@
+{
+  "position": "bottom",
+  "modules-center": ["wlr/taskbar"],
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 32,
+    "icon-theme": "Papirus-Dark",
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "on-click-right": "maximize",
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$(playerctl status >>/dev/null 2>&1; echo $?)" == "1" ]
+then
+	echo "Spotify: Not Active"
+	exit 0
+fi
+
+if [ "$(playerctl status)" == "Playing" ]
+then
+	title=$(playerctl metadata xesam:title)
+	artist=$(playerctl metadata xesam:artist)
+	echo "Spotify: $title | $artist"
+else
+	echo "Spotify: Music Stopped"
+fi
+

@@ -1,0 +1,104 @@
+// vim:set ft=jsonc:
+{
+  "position": "top",
+  "modules-left": [
+    "custom/arch-pill",
+    "sway/workspaces",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "custom/weather"
+  ],
+  "modules-center": ["custom/playerctl"],
+  "modules-right": ["tray", "network", "pulseaudio", "backlight", "clock"],
+  // Modules configuration
+  "custom/arch-pill": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/exec_wofi application_launcher",
+    "tooltip": false
+  },
+  "clock": {
+    "format-alt": "<span foreground='#cba6f7'> </span><span>{:%I:%M %p %a %d}</span>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "<span foreground='#89dceb'> </span><span>{:%I:%M %p}</span>",
+  },
+  "cpu": {
+    "format": "<span foreground='#89b4fa'></span>  {usage}%"
+  },
+  "memory": {
+    "format": "<span foreground='#f5e0dc'></span> {}%",
+    "on-click": "kitty htop"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "<span foreground='#eba0ac'></span> {temperatureC}°C"
+  },
+  "backlight": {
+    "device": "amdgpu_b10",
+    "format": "<span foreground='#f9e2af'>{icon}</span>  {percent}%",
+    "states": [0, 50],
+    "format-icons": ["", ""]
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span foreground='#a6e3a1'>{icon}</span>   {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "interface": "wlo1",
+    "format": "Loading",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "Disconnected",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid}({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "kitty nmtui"
+  },
+  "pulseaudio": {
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format": "<span size='13000' foreground='#fab387'></span>  {volume}%",
+    "format-muted": "<span size='14000'>ﱝ</span>",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["奔", "墳"]
+    },
+    "on-click-right": "pavucontrol"
+  },
+  "custom/playerctl": {
+    "format": "{icon}  <span>{}</span>",
+    "return-type": "json",
+    "max-length": 50,
+    "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl previous",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "format-icons": {
+      "Paused": "<span foreground='#94e2d5'></span>",
+      "Playing": "<span foreground='#f38ba8'></span>"
+    }
+  },
+  "tray": {
+    "icon-size": 20,
+    "reverse-direction": true,
+    "spacing": 6
+  },
+ "custom/weather" : {
+        "tooltip" : true,
+        "format" : "{}",
+        "restart-interval" : 300,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+  }
+}
