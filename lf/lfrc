@@ -1,0 +1,187 @@
+set shell bash
+set shellopts '-eu'
+set icons
+set relativenumber
+set scrolloff 10
+set ifs "\n"
+set previewer less
+
+
+map a push :mkdir<space>
+map C clear
+map c cut
+map d delete
+map D trash
+map o &mimeopen $f
+map O $mimeopen --ask $f
+map <a-n> newfold
+map ` push :open-with<space>
+
+cmd open-with %"$@" "$fx"
+cmd trash %trash-put $fx
+cmd mkdir %mkdir "$@"
+
+cmd newfold ${{
+    set -f
+    read newd
+    printf "Directory name: "
+    mkdir -- "$newd"
+    mv -- $fx "$newd"
+}}
+
+cmd j %{{
+    result="$(zoxide query --exclude "${PWD}" -- "$@")"
+    lf -remote "send ${id} cd '${result}'"
+}}
+
+cmd ji ${{
+    result="$(zoxide query -i -- "$@")"
+    lf -remote "send ${id} cd '${result}'"
+}}
+
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 1 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ] ; then
+        cmd="cd"
+    elif [ -f "$res" ] ; then
+        cmd="select"
+    else
+        exit 0
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+map <c-f> :fzf_jump
+
+cmd fzf_search ${{
+    res="$( \
+        RG_PREFIX="rg --column --line-number --no-heading --color=always \
+            --smart-case "
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
+            --ansi --layout=reverse --header 'Search in files' \
+            | cut -d':' -f1
+    )"
+    [ ! -z "$res" ] && lf -remote "send $id select \"$res\""
+}}
+map gs :fzf_search
+
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+# compress current file or selected files with tar and gunzip
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+
+# compress current file or selected files with zip
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $(pwd | sed "s|$HOME|~|") - lf\007" > /dev/tty
+}}
+on-cd
+
+cmd open ${{
+    case $(file --mime-type -Lb $f) in
+        text/*) $EDITOR $fx;;
+        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+cmd select-files ${{
+    { echo "$fs"; find -L "$(pwd)" -mindepth 1 -maxdepth 1 -type f; } |
+        if [ "$lf_hidden" = "false" ]; then
+          # remove any hidden files so you only select files you can see.
+          grep -v '/\.[^/]\+$'
+        else
+          cat
+        fi |
+        sed '/^$/d' | sort | uniq -u |
+        xargs -d '\n' -r -I{} lf -remote "send $id toggle {}"
+}}
+
+cmd select-dirs ${{
+    { echo "$fs"; find -L "$(pwd)" -mindepth 1 -maxdepth 1 -type d; } |
+        if [ "$lf_hidden" = "false" ]; then
+          grep -v '/\.[^/]\+$'
+        else
+          cat
+        fi |
+        sed '/^$/d' | sort | uniq -u |
+        xargs -d '\n' -r -I{} lf -remote "send $id toggle {}"
+}}
+
+
+cmd cut-add %{{
+    files=$(lf -remote load | tail -n +2)
+    newline=$'\n'
+
+    # change to $fx to add current file when no toggled
+    # files exist.
+    if [ -n "$files" ]; then
+        new_files=$(echo "$files${newline}$fs" | sort | uniq)
+    else
+        new_files=$fs
+    fi
+    # remove empty lines from the file list, because they keep messing
+    # up the selection.
+    new_files=$(echo "$new_files" | sed --quiet -e '/^$/d' -e 'p')
+
+    lf -remote "save${newline}move${newline}${new_files}${newline}"
+    lf -remote "send $id unselect${newline}send $id sync"
+}}
+
+cmd cut-remove %{{
+    files=$(lf -remote load)
+    operation=$(echo "$files" | head -n1)
+
+    if [ "$operation" != "move" ]; then
+        lf -remote "send $id echoerr no files in cut list."
+        exit 1
+    fi
+
+    files=$(echo "$files" | tail -n +2)
+    newline=$'\n'
+
+    # change to $fx to remove current file when no toggled
+    # files exist.
+    if [ -n "$files" ]; then
+        # here we want all files in $files that aren't in $fs, making sure
+        # that none of the entries in $fs are included, even when they aren't
+        # in $files. To do this we concatenate $files and $fs (twice), printing
+        # only the uniqe lines.
+        new_files=$(echo "$files$newline$fs$newline$fs" | sort | uniq -u)
+    else
+        new_files=$files
+    fi
+    new_files=$(echo "$new_files" | sed --quiet -e '/^$/d' -e 'p')
+
+    lf -remote "save${newline}move${newline}${new_files}${newline}"
+    lf -remote "send $id unselect${newline}send $id sync"
+}}
+
+cmd yank-dirname $dirname -- "$f" | head -c-1 | xclip -i -selection clipboard
+cmd yank-path $printf '%s' "$fx" | xclip -i -selection clipboard
+cmd yank-basename $basename -a -- $fx | head -c-1 | xclip -i -selection clipboard
