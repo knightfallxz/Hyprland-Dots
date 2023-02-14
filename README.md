@@ -16,11 +16,16 @@
  # The Fall 
  
 ![screen_1](/assets/ImagesShowcase.png)
+
+ # Garden Theme 
+ 
+ ![image](https://user-images.githubusercontent.com/107239398/218796171-0a421c4d-6ea4-42e2-8203-f8942f3df8b0.png)
+
    
 </div>
 
 # Details
-- **OS**: Arco Linux
+- **OS**: Arch Linux
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Top Bar**: [Waybar](https://github.com/Alexays/Waybar/)
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
