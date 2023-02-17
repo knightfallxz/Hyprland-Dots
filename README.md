@@ -21,7 +21,7 @@
  
  ![image](https://user-images.githubusercontent.com/107239398/218796171-0a421c4d-6ea4-42e2-8203-f8942f3df8b0.png)
 
- # Galaxt Theme
+ # Galaxy Theme
  
  ![image](https://user-images.githubusercontent.com/107239398/219070968-a5e11084-dcf9-4cdf-885d-eb59ef96f005.png)
 
