@@ -7,6 +7,10 @@
 
 <br/>
 
+# Catpuccin 
+
+![image](https://user-images.githubusercontent.com/107239398/219909848-7c7f962e-770e-4370-9839-0b9416adae17.png)
+
  # The Ghost 
  
 ![image](https://user-images.githubusercontent.com/107239398/214760985-49abe680-e4b7-4099-a440-86ff07c2121e.png)
@@ -37,4 +41,5 @@
 - **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Search menu**: [wofi](https://github.com/uncomfyhalomacro/wofi)
 - **Fetch script**: `Neofetch`
+- **Themes**: `Use the waybar config as configcat and stylecss as stylecat ```
 
