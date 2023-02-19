@@ -1,0 +1,113 @@
+{
+  "layer": "top",
+    "height": 10,
+    "modules-left": ["custom/arch", "wlr/workspaces" , "memory"],
+    "modules-center": ["custom/playerctl"],
+    "modules-right": ["backlight","pulseaudio", "battery", "network","clock"],
+    "custom/arch": {
+      "format": "  ",
+      "on-click": "sh /home/knightfall/.config/hypr/scripts/exec_wofi application_launcher"
+    },
+    "wlr/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "all-outputs": true,
+      "persistent_workspaces" :{
+          "1": [],
+	 		    "2": [],
+	 		    "3": [],
+	 		    "4": [],
+	 		    "5": [],
+	 		    "6": [],
+	 		    "7": [],
+	 		    "8": [],
+	 		    "9": [],
+	 		    "10": []
+        },
+        "format-icons": {
+                "1": "",
+             		"2": "",
+             		"3": "",
+             		"4": "",
+             		"5": "",
+             		"6": "",
+             		"7": "",
+             		"8": "",
+             		"9": "",
+             		"10": "〇"
+          }
+    },
+    "clock": {
+      "format": "<span color='#b5b2ec'> </span>{:%H:%M}",
+  "format-alt": "<span foreground='#b5b2ec'> </span><span>{:%I:%M %p %a %d}</span>",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "backlight": {
+      "device": "amdgpu_b10",
+      "format": "<span color='#b5b2ec'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "custom/sound": {
+      "format": "<span color='#5d7'> </span>{}",
+      "exec": "custom-alsa.sh",
+    },
+    "network": {
+      "interface": "wlan0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b5b2ec'> </span>{essid}({signalStrength}%)",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#e80064'>󰖪 </span>No Network",
+      "on-click": "kitty nmtui"
+    },
+    "battery": {
+      "format": "<span color='#b5b2ec'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#b5b2ec'></span> {capacity}%"
+    },
+    "pulseaudio": {
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "format": "<span color='#b5b2ec'></span> {volume}%",
+      "format-muted": "<span color='#ff0000'>ﱝ</span>",
+      "format-icons": {
+       "headphone": "",
+       "hands-free": "",
+       "headset": "",
+       "phone": "",
+       "portable": "",
+       "car": "",
+       "default": ["奔", "墳"]
+    },
+    "on-click-right" : "pavucontrol"
+    },
+    "memory": {
+    "format": "<span foreground='#b5b2ec'></span> {}%",
+    "on-click": "kitty htop"
+    },
+    "tray": {
+    "icon-size": 20,
+    "reverse-direction": true,
+    "spacing": 6
+    },
+    "cpu": {
+    "format": "<span foreground='#7bc0b3'></span>  {usage}%"
+     },
+     "temperature": {
+    "critical-threshold": 80,
+    "format": "<span foreground='#5d73ca'></span> {temperatureC}°C"
+     },
+    "custom/playerctl": {
+     "format": "{icon}  <span>{}</span>",
+     "return-type": "json",
+     "max-length": 55,
+     "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+     "on-click-middle": "playerctl previous",
+     "on-click": "playerctl play-pause",
+     "on-click-right": "playerctl next",
+     "format-icons": {
+       "Paused": "<span foreground='#b5b2ec'></span>",
+       "Playing": "<span foreground='#b5b2ec'></span>"
+     }
+     }
+
+}
+
