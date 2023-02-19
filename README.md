@@ -41,5 +41,5 @@
 - **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Search menu**: [wofi](https://github.com/uncomfyhalomacro/wofi)
 - **Fetch script**: `Neofetch`
-- **Themes**: `Use the waybar config as configcat and stylecss as stylecat ```
+- **Themes**: `Use the waybar config as configcat and stylecss as stylecat`
 
