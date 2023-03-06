@@ -1,7 +1,6 @@
 ;; includes
 (include "yuck/variables.yuck")
 (include "yuck/notifications.yuck")
-(include "yuck/sidebar/music.yuck")
 (include "yuck/sidebar/apatheia.yuck")
 (include "yuck/sidebar/sys-tray.yuck")
 (include "yuck/sidebar/clipboard.yuck")
@@ -41,10 +40,10 @@
     :orientation "h"
     (button
       :onclick "~/.config/hypr/scripts/exec_wofi application_launcher"
-      (image
+      (label
         :class "launcher-icon"
-        :path "assets/snowflake.png"
-      :image-width 32))
+        :text ""
+      ))
   ))
 
 (defwidget workspaces []
@@ -132,7 +131,7 @@
       (button
         :onclick "scripts/pop audio_ctl"
         :class "volume_icon"
-      "墳"))))
+      ""))))
 
 (defwidget wifi []
   (eventbox
@@ -167,8 +166,8 @@
       (button
         :onclick "scripts/pop system"
         :class "iconbat"
-        :tooltip "battery on ${EWW_BATTERY["BAT0"].capacity}%"
-      ""))))
+        :tooltip "Battery on ${EWW_BATTERY["BAT0"].capacity}%"
+      ""))))
 
 (defwidget mem []
   (box
@@ -228,12 +227,13 @@
       :text "|"
     )))
 
+
 (defwidget gap []
   (box
     :orientation "h"
     :hexpand "false"
     :visible "true"
-  :width "150"))
+  :width "10"))
 
 
 ;;define widget groups
@@ -243,6 +243,7 @@
     :space-evenly false
     :halign "start"
     :class "left_modules"
+    (gap)
     (workspaces)))
 (defwidget center []
   (box
@@ -324,7 +325,7 @@
             :value volume_percent
             :orientation "h"
             :onchange "amixer -D pulse sset Master {}%"
-            :tooltip "volume on ${volume_percent}%"
+            :tooltip "Volume on ${volume_percent}%"
             :max 100
           :min 0))))
     (label

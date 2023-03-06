@@ -45,17 +45,17 @@ tooltip label {
 
 .clock_time_class,
 .clock_minute_class {
-    font-size: 28;
+    font-size: 20;
 }
 
 .clock_date_class {
     font-size: 24;
     margin: 0px 20px -4px -1px;
-    color: $white;
+    color: $red;
 }
 
 .clock_time_class {
-    color: $white;
+    color: $primary;
     font-weight: bold;
     margin: 2px 10px 0px 2px;
 }
@@ -69,7 +69,7 @@ tooltip label {
 .membar {
     color: $secondary;
     background-color: $widget-background;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 .batbar {
@@ -113,7 +113,7 @@ tooltip label {
 
 .icon-launcher {
     color: $white;
-    font-size: 36px;
+    font-size: 70px;
     margin: 0px 10px 0px 15px;
 }
 
@@ -133,7 +133,7 @@ tooltip label {
 
 .iconbat,
 .iconmem {
-    font-size: 15;
+    font-size: 10;
     margin: 10px;
 }
 
@@ -172,7 +172,7 @@ tooltip label {
     font-size: 28px;
     font-weight: normal;
     // margin: 10px 0px 0px 10px;
-    background-color: rgba(00, 00, 00, 0.0);
+    // background-color: rgba(00, 00, 00, 0.0);
 }
 
 .ws-btn{
@@ -210,7 +210,7 @@ tooltip label {
 .08,
 .09,
 .010 {
-    color: $white;
+    color: $primary ;
 }
 
 /* Focused */
@@ -224,7 +224,7 @@ tooltip label {
 .088,
 .099,
 .01010 {
-    color: $secondary;
+    color: #d5d7d7;
 }
 
 
@@ -283,7 +283,7 @@ calendar:indeterminate {
 
 .sys_sep {
     color: $widget-background;
-    font-size: 18;
+    font-size: 14;
     margin: 0px 10px 0px 10px;
 }
 

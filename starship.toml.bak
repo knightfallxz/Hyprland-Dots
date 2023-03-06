@@ -1,0 +1,45 @@
+[line_break]
+disabled = true
+
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[✗](bold red)"
+
+[conda]
+format = "[$environment](bold green)"
+ignore_base = false
+
+# [directory]
+# truncation_length = 3
+# truncation_symbol = "…/"
+
+[git_branch]
+symbol = " "
+truncation_length = 4
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_status]
+conflicted = "="
+ahead = "⇡"
+behind = "⇣"
+diverged = "⇕"
+up_to_date = "✓"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+# deleted = "✘"
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "[](bold green) "
+disabled = false
+show_always = true
+
+[nodejs]
+format = '[󰎙 $version](bold green) '
