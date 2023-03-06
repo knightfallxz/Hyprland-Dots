@@ -1,6 +1,6 @@
 <div align="center">
 
-# "The Ghost Rice" Dot Files
+# Dot Files
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=#e97193) ![GitHub last commit](https://img.shields.io/github/last-commit/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=#e97193) ![GitHub repo size](https://img.shields.io/github/repo-size/AmadeusWM/dotfiles-hyprland?style=for-the-badge&color=#e97193)
 
