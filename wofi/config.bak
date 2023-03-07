@@ -1,8 +1,8 @@
-width=600
-height=500
+width=700
+height=400
 location=center
 show=drun
-prompt=Apps
+prompt=Search...
 filter_rate=100
 allow_markup=true
 no_actions=true
