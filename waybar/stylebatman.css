@@ -1,0 +1,87 @@
+* {
+  border: none;
+  font-family: 'JetBrainsMono Nerd Font' , 'Symbols Only';
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 30px;
+  /* height: 30px; */
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-arch, #workspaces {
+  border-radius: 10px;
+  background-color: #0f1014;
+  color: #ff005f;
+  margin-top: 15px;
+	margin-right: 15px;
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-arch {
+  font-size: 20px;
+	margin-left: 15px;
+}
+
+#workspaces button {
+  background: #0f1014;
+  color: #323c43;
+}
+
+#workspaces button.active {
+  color: #ff005f;
+}
+
+#clock, #backlight, #custom-info-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
+  border-radius: 10px;
+  background-color: #0f1014;
+  color: #ff005f;
+  margin-top: 15px;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-right: 15px;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: #f38ba8;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* #pulseaudio { */
+/*   font-size: 20px; */
+/* 	margin-left: 15px; */
+/* } */
+
+#tray{
+  padding-right: 8px;
+  padding-left: 10px;
+}
+
+/* #pulseaudio { */
+/*   border-radius: 10px; */
+/*   background-color: #11111b; */
+/*   color: #cba6f7; */
+/*   margin-top: 15px; */
+/* 	margin-right: 15px; */
+/*   padding-top: 1px; */
+/*   padding-left: 10px; */
+/*   padding-right: 10px; */
+/* } */
+
+
