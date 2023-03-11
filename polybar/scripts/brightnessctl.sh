@@ -1,4 +1,5 @@
 #!/bin/bash
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 BRIGHTNESS_VALUE=`brightnessctl | grep -o "(.*" | tr -d "()"`
 BRIGHTNESS_NR=${BRIGHTNESS_VALUE//%}
 

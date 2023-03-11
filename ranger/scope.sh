@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 # ranger supports enhanced previews.  If the option "use_preview_script"
 # is set to True and this file exists, this script will be called and its
 # output is displayed in ranger.  ANSI color codes are supported.

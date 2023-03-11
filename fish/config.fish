@@ -1,3 +1,4 @@
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end

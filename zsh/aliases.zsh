@@ -1,3 +1,5 @@
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
+
 alias ls='exa'
 alias la='exa -a'
 alias ll='exa -lh'

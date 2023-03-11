@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 # Connect to WIFI
-# Modified from https://github.com/zbaylin/rofi-wifi-menu/blob/master/rofi-wifi-menu.sh
 
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"

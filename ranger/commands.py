@@ -1,3 +1,4 @@
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3 
 from ranger.api.commands import Command
 
 class paste_as_root(Command):

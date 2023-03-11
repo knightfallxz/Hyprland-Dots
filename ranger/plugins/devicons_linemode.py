@@ -1,3 +1,4 @@
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 import os
 terminal=terminal=os.getenv('TERM')
 if terminal != 'linux':

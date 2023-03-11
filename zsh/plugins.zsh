@@ -1,4 +1,4 @@
-# Clone zcomet if necessary
+# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 if [[ ! -f $HOME/.config/zsh/zcomet/bin/zcomet.zsh ]]; then
   git clone https://github.com/agkozak/zcomet.git $HOME/.config/zsh/zcomet/bin
 fi
