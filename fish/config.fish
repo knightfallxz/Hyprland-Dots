@@ -6,11 +6,11 @@ starship init fish | source
 set -U fish_greeting ""
 cat ~/.cache/wal/sequences
 sh ~/.bin/colorscripts/crunchbang-mini
-export OPENAI_API_KEY='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'
+export OPENAI_API_KEY='YOUR-TOKEN'
 alias l="exa -all"
 alias ls="exa"
 alias nivm="nvim"
-alias GitHubToken="echo GitHubToken= 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"
+alias GitHubToken="echo GitHubToken= PUTYOURTOKEN"
 alias open="xdg-open"
 alias findme="grep -nr"
 function extract
