@@ -1,9 +1,7 @@
 <div align="center">
 
-Dot Files
+# Dot Files
 
-
-  
 <br/>
 
 # Vagabond
