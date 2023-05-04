@@ -1,39 +1,16 @@
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3 
-from ranger.api.commands import Command
+from __future__ import (absolute_import, division, print_function)
 
-class paste_as_root(Command):
-	def execute(self):
-		if self.fm.do_cut:
-			self.fm.execute_console('shell sudo mv %c .')
-		else:
-			self.fm.execute_console('shell sudo cp -r %c .')
+from ranger.api.commands import *
 
-class fzf_select(Command):
+import os
+
+class emptytrash(Command):
+    """:empty
+
+    Empties the trash 
     """
-    :fzf_select
 
-    Find a file using fzf.
-
-    With a prefix argument select only directories.
-
-    See: https://github.com/junegunn/fzf
-    """
     def execute(self):
-        import subprocess
-        import os.path
-        if self.quantifier:
-            # match only directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m --reverse --header='Jump to file'"
-        else:
-            # match files and directories
-            command="find -L . \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m --reverse --header='Jump to filemap <C-f> fzf_select'"
-        fzf = self.fm.execute_command(command, universal_newlines=True, stdout=subprocess.PIPE)
-        stdout, stderr = fzf.communicate()
-        if fzf.returncode == 0:
-            fzf_file = os.path.abspath(stdout.rstrip('\n'))
-            if os.path.isdir(fzf_file):
-                self.fm.cd(fzf_file)
-            else:
-                self.fm.select_file(fzf_file)
+        HOME = os.environ['HOME']
+        self.fm.run(f'trash-empty')
+

@@ -1,4 +1,3 @@
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 prompt off
 
 autoload -Uz add-zsh-hook vcs_info

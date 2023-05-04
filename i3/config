@@ -34,13 +34,12 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start program launcher
-bindsym Mod1+space exec --no-startup-id sh ~/.config/rofi/launchers/type-1/launcher.sh
+bindsym Mod1+space exec --no-startup-id sh /home/knightfall/.config/rofi/launchers/type-1/launcher.sh
 bindsym Mod1+Tab exec --no-startup-id rofi -show window -show-icons
 
 # launch categorized menu
-# bindsym $mod+z exec  wal -i /home/knightfall/Pictures/One\ Piece\ 1015\ 4k/wallhaven-g77rjq.jpg 
-exec --no-startup-id cat ~/.cache/wal/sequences
-
+bindsym $mod+z exec  wal -i /home/knightfall/Pictures/One\ Piece\ 1015\ 4k/clouds.png
+exec --no-startup-id wal -i /home/knightfall/Pictures/One\ Piece\ 1015\ 4k/scenrygreen.png
 bindsym $mod+t exec --no-startup-id alacritty -o "window.startup_mode=Fullscreen" font.size=10
 bindsym $mod+i exec "alacritty --class 'myterm,myterm' --hold -e nmtui"
 ################################################################################################
@@ -48,8 +47,8 @@ bindsym $mod+i exec "alacritty --class 'myterm,myterm' --hold -e nmtui"
 ################################################################################################
 
 exec --no-startup-id volumeicon
-exec --no-startup-id sh ~/.config/polybar/scripts/spotify
-exec --no-startup-id sh ~/.config/polybar/scripts/spotifyhooks
+exec --no-startup-id sh /home/knightfall/.config/polybar/scripts/spotify
+exec --no-startup-id sh /home/knightfall/.config/polybar/scripts/spotifyhooks
 
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 #exec --no-startup-id pulseaudio
@@ -81,7 +80,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+s exec shutter -se
 bindsym $mod+shift+w exec rofi -show
 bindsym $mod+Shift+i exec rofi-wifi-menu.sh
-bindsym $mod+x exec sh ~/.config/rofi/powermenu/type-3/powermenu.sh
+bindsym $mod+x exec sh /home/knightfall/.config/rofi/powermenu/type-3/powermenu.sh
 bindsym $mod+shift+x exec reboot 
 bindsym $mod+p exec polybar
 bindsym $mod+Shift+p exec killall polybar
@@ -314,14 +313,15 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 #exec_always --no-startup-id picom
-# exec --no-startup-id /home/knightfall/Documents/Personal/Script/i3-alternating-layout/alternating_layouts.py 
+exec --no-startup-id /home/knightfall/Documents/Personal/Script/i3-alternating-layout/alternating_layouts.py 
 #exec_always --no-startup-id polybar
 #exec_always --no-startup-id wal -i /home/knightfall/Pictures/One Piece 1015 4k/ichigo.png
 #exec_always --no-startup-id /home/knightfall/polybar-collection/launch.sh
 #exec_always --no-startup-id picom -b --experimental-backend
 exec --no-startup-id picom
-exec --no-startup-id polybar
+# exec_always --no-startup-id polybar
 # exec_always --no-startup-id polybar 
+exec_always --no-startup-id polybar
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -392,9 +392,9 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #e6daa6 #e6daa6 #AE1E33 #e6daa6
+  client.focused          #536c89 #536c89 #AE1E33 #536c89
   client.focused_inactive #a6bf9e #a6bf9e #FD9774 #a6bf9e
-  client.unfocused        #380B0D #380B0D #380B0D #380B0D
+  client.unfocused        #000000 #000000 #000000 #000000
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 

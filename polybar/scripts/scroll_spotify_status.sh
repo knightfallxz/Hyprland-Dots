@@ -1,5 +1,5 @@
 #!/bin/bash
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
+
 # see man zscroll for documentation of the following parameters
 zscroll -l 30 \
         --delay 0.1 \

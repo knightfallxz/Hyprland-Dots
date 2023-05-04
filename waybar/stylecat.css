@@ -1,10 +1,10 @@
-/* # By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3 */
 * {
   border: none;
   font-family: 'JetBrainsMono Nerd Font' , 'Symbols Only';
   font-size: 16px;
   font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
   min-height: 30px;
+  /* height: 30px; */
 }
 
 window#waybar {
@@ -13,9 +13,9 @@ window#waybar {
 
 #custom-arch, #workspaces {
   border-radius: 10px;
-  background-color: #0c0d15;
-  color: #b5b2ec;
-  margin-top: 15px;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin-top: 7px;
 	margin-right: 15px;
   padding-top: 1px;
   padding-left: 10px;
@@ -28,19 +28,19 @@ window#waybar {
 }
 
 #workspaces button {
-  background: #0c0d15;
-  color: #727198;
+  background: #0a0a0a;
+  color: #676767;
 }
 
 #workspaces button.active {
-  color: #b5b2ec;
+  color: #ffffff;
 }
 
-#clock, #backlight, #custom-info-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
+#clock, #backlight, #custom-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
   border-radius: 10px;
-  background-color: #0c0d15;
-  color: #d8cdeb;
-  margin-top: 15px;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin-top: 7px;
   padding-left: 9px;
   padding-right: 9px;
   margin-right: 15px;

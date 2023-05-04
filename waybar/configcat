@@ -8,6 +8,10 @@
       "format": "  ",
       "on-click": "sh /home/knightfall/.config/hypr/scripts/exec_wofi application_launcher"
     },
+    "custom/cava_test": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/sound/expand cava-icon"
+    },
     "wlr/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
@@ -25,26 +29,31 @@
 	 		    "10": []
         },
         "format-icons": {
-                "1": "",
-             		"2": "",
-             		"3": "",
-             		"4": "",
-             		"5": "",
-             		"6": "",
-             		"7": "",
-             		"8": "",
-             		"9": "",
-             		"10": "〇"
+                "1": "1",
+             		"2": "2",
+             		"3": "3",
+             		"4": "4",
+             		"5": "5",
+             		"6": "6",
+             		"7": "7",
+             		"8": "8",
+             		"9": "9",
+             		"10": "1〇"
           }
     },
     "clock": {
-      "format": "<span color='#b5b2ec'> </span>{:%H:%M}",
-  "format-alt": "<span foreground='#b5b2ec'> </span><span>{:%I:%M %p %a %d}</span>",
+      "format": "<span color='#e1e1e1'> </span>{:%H:%M}",
+  "format-alt": "<span foreground='#e1e1e1'> </span><span>{:%I:%M %p %a %d}</span>",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
+    "custom/cava": {
+      "format": "<span color='#f7768e'></span> {volume}%",
+      "exec": "sh ~/.config/polybar/scripts/cava.sh" ,
+      "label": "%output%"
+      },
     "backlight": {
       "device": "amdgpu_b10",
-      "format": "<span color='#b5b2ec'>{icon}</span> {percent}%",
+      "format": "<span color='#e1e1e1'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "custom/sound": {
@@ -54,20 +63,21 @@
     "network": {
       "interface": "wlan0",
       "format": "{ifname}",
-      "format-wifi": "<span color='#b5b2ec'> </span>{essid}({signalStrength}%)",
+      "format-wifi": "<span color='#e1e1e1'> </span>{essid}({signalStrength}%)",
       "format-ethernet": "{ipaddr}/{cidr} ",
-      "format-disconnected": "<span color='#e80064'>󰖪 </span>No Network",
+      "format-disconnected": "<span color='#e1e1e1'>󰖪 </span>No Network",
       "on-click": "kitty nmtui"
     },
     "battery": {
-      "format": "<span color='#b5b2ec'>{icon}</span> {capacity}%",
-      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#b5b2ec'></span> {capacity}%"
+      "format": "<span color='#e1e1e1'>{icon}</span> {capacity}%",
+      //"format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#e1e1e1'></span> {capacity}%"
     },
     "pulseaudio": {
       "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "format": "<span color='#b5b2ec'></span> {volume}%",
-      "format-muted": "<span color='#ff0000'>ﱝ</span>",
+      "format": "<span color='#e1e1e1'></span> {volume}%",
+      "format-muted": "<span color='#e1e1e1'>ﱝ</span>",
       "format-icons": {
        "headphone": "",
        "hands-free": "",
@@ -80,7 +90,7 @@
     "on-click-right" : "pavucontrol"
     },
     "memory": {
-    "format": "<span foreground='#b5b2ec'></span> {}%",
+    "format": "<span foreground='#e1e1e1'></span> {}%",
     "on-click": "kitty htop"
     },
     "tray": {
@@ -89,11 +99,11 @@
     "spacing": 6
     },
     "cpu": {
-    "format": "<span foreground='#7bc0b3'></span>  {usage}%"
+    "format": "<span foreground='#e1e1e1'></span>  {usage}%"
      },
      "temperature": {
     "critical-threshold": 80,
-    "format": "<span foreground='#5d73ca'></span> {temperatureC}°C"
+    "format": "<span foreground='#e1e1e1'></span> {temperatureC}°C"
      },
     "custom/playerctl": {
      "format": "{icon}  <span>{}</span>",
@@ -104,8 +114,8 @@
      "on-click": "playerctl play-pause",
      "on-click-right": "playerctl next",
      "format-icons": {
-       "Paused": "<span foreground='#b5b2ec'></span>",
-       "Playing": "<span foreground='#b5b2ec'></span>"
+       "Paused": "<span foreground='#e1e1e1'></span>",
+       "Playing": "<span foreground='#e1e1e1'></span>"
      }
      }
 

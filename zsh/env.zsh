@@ -1,5 +1,4 @@
 # editor
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
 export VISUAL="neovide"
 export EDITOR="nvim"
 

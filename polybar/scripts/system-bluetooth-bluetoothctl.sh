@@ -1,5 +1,5 @@
 #!/bin/sh
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
+
 bluetooth_print() {
     bluetoothctl | while read -r; do
         if [ "$(systemctl is-active "bluetooth.service")" = "active" ]; then

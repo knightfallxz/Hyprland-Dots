@@ -1,0 +1,59 @@
+# See this wiki page for more info:
+# https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
+print_info() {
+    # prin "\n"
+    # prin "\n"
+    # info "\n \n \n \n \n \n \n \n \n USER" title
+    prin "┌─────────────────────────────────────────┐"
+    info " ​ ${cl4}  " distro
+    info " ​ ${cl4} 󰌢 " model
+    info " ​ ${cl4}  " kernel
+    info " ​ ${cl4} 󱑏 " uptime
+    info " ​ ${cl4} 󰏗 " packages
+    info " ​ ${cl4}  " shell
+    info " ​ ${cl4}  " de
+    info " ​ ${cl4}  " wm
+    info " ​ ${cl4} 󰍛 " memory
+    prin "└─────────────────────────────────────────┘"
+
+    prin "\n"
+    prin "\n \n \n \n \n \n \n \n \n ${cl0}⬤ ${cl7}⬤ ${cl6}⬤ ${cl5}⬤ ${cl4}⬤ ${cl3}⬤ ${cl2}⬤ ${cl1}⬤"
+}
+
+reset="\033[0m"
+red="\033[1;31m"
+green="\033[1;32m"
+yellow="\033[1;33m"
+blue="\033[1;34m"
+magenta="\033[1;35m"
+cyan="\033[1;36m"
+white="\033[1;37m"
+
+cl0="${reset}"
+cl1="${red}"
+cl2="${green}"
+cl3="${yellow}"
+cl4="${blue}"
+cl5="${magenta}"
+cl6="${cyan}"
+cl7="${white}"
+separator=" ▐ "
+ascii_distro="arch_small" 
+# logo="$(/home/dark/.config/neofetch/logo)"
+image_source="$logo"
+# ascii_colors=(1 2 3)
+
+# Shorten the output of the distro function
+# distro_shorthand="on"
+
+# Show/Hide OS Architecture.
+os_arch="on"
+
+# Shorten the output of the uptime function
+uptime_shorthand="on"
+
+# Show memory pecentage in output.
+# memory_percent="on"
+
+# Change memory output unit ('kib', 'mib', 'gib')
+memory_unit="mib"

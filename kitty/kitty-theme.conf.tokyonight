@@ -1,0 +1,102 @@
+# vim:ft=kitty
+
+## name: Catppuccin
+## author: Pocco81 (https://github.com/Pocco81)
+## license: MIT
+## upstream: https://raw.githubusercontent.com/catppuccin/kitty/main/catppuccin.conf
+## blurb: Soothing pastel theme for the high-spirited!
+
+# The basic colors
+foreground              #E2E0EC
+#background              #27163a
+background              #191a24
+#background              #12121a
+selection_foreground    #D9E0EE
+selection_background    #575268
+
+# Transparent Background
+background_opacity 1
+
+# Cursor colors
+cursor                  #F5E0DC
+cursor_text_color       #1E1E2E
+
+# URL underline color when hovering with mouse
+url_color               #F5E0DC
+
+# kitty window border colors
+active_border_color     #C9CBFF
+inactive_border_color   #575268
+bell_border_color       #FAE3B0
+
+# OS Window titlebar colors
+wayland_titlebar_color system
+macos_titlebar_color system
+
+#: Tab bar colors
+active_tab_foreground   #F5C2E7
+active_tab_background   #575268
+inactive_tab_foreground #D9E0EE
+inactive_tab_background #1E1E2E
+tab_bar_background      #161320
+
+# Colors for marks (marked text in the terminal)
+
+mark1_foreground #1E1E2E
+mark1_background #96CDFB
+mark2_foreground #1E1E2E
+mark2_background #F5C2E7
+mark3_foreground #1E1E2E
+mark3_background #B5E8E0
+
+#: The 16 terminal colors
+
+#: black
+color0 #15161e
+color8 #414868
+
+#: red
+color1 #e77d8f
+color9 #e77d8f
+
+#: green
+color2  #a8cd76
+color10 #a8cd76
+
+#: yellow
+color3  #d9b172
+color11 #d9b172
+
+#: blue
+color4  #82a1f1
+color12 #82a1f1
+
+#: magenta
+color5  #b69bf1
+color13 #b69bf1
+
+#: cyan
+color6  #90cdfa
+color14 #90cdfa
+
+#: white
+color7  #aab1d3
+color15 #aab1d3
+
+#font_family Symbols only
+#font_family Caskaydia Cove
+#font_family JetBrainsMono Regular
+#bold_font auto
+#italic_font auto
+
+font_size 16
+
+#font_family       Iosevka
+font_family      JetBrains Mono Regular
+bold_font        JetBrains Mono Bold
+italic_font      JetBrains Mono Italic
+bold_italic_font JetBrains Mono Bold Italic
+#bold_font          auto 
+#italic_font        auto  
+#bold_italic_font   auto
+

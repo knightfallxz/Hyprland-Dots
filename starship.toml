@@ -1,7 +1,5 @@
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
-
 [nodejs]
-format = 'on [🍀 $version](bold green)'
+format = 'on [󰎙 $version](bold green)'
 
 [python]
 format = 'on [  $version](bold yellow)'

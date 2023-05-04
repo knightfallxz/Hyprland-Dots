@@ -1,5 +1,3 @@
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
-
 ## Configuration file for CAVA. Default values are commented out. Use either ';' or '#' for commenting.
 
 
@@ -160,10 +158,10 @@
 # Gradient mode, only hex defined colors are supported,
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
-gradient = 0
-gradient_count = 2
-gradient_color_1 = '#e0282c'
-gradient_color_2 = '#ec4b51'
+; gradient = 0
+; gradient_count = 8
+; gradient_color_1 = '#59cc33'
+; gradient_color_2 = '#80cc33'
 ; gradient_color_3 = '#a6cc33'
 ; gradient_color_4 = '#cccc33'
 ; gradient_color_5 = '#cca633'
@@ -210,3 +208,4 @@ gradient_color_2 = '#ec4b51'
 ; 3 = 1 # midtone
 ; 4 = 1
 ; 5 = 1 # treble
+

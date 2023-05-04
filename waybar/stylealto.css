@@ -1,5 +1,3 @@
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
-
 * {
   border: none;
   font-family: 'JetBrainsMono Nerd Font' , 'Symbols Only';
@@ -14,8 +12,8 @@ window#waybar {
 
 #custom-arch, #workspaces {
   border-radius: 10px;
-  background-color: #0c0e11;
-  color: #f0d0da;
+  background-color: #1a1b26;
+  color: #9ece6a;
   margin-top: 15px;
 	margin-right: 15px;
   padding-top: 1px;
@@ -29,7 +27,7 @@ window#waybar {
 }
 
 #workspaces button {
-  background: #0c0e11;
+  background: #1a1b26;
   color: #a9b1d6;
 }
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
+
 import sys
 import dbus
 import argparse

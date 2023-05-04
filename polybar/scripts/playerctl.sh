@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# By knightfall01 as a part of https://github.com/Knightfall01/Hyprland-i3
+#
 # playerctlstatus=$(playerctl status 2> /dev/null)
 #
 # if [[ $playerctlstatus ==  "" ]]; then
