@@ -17,5 +17,4 @@ alias open="xdg-open"
 alias findme="grep -nr"
 
 alias CollegeEmail="echo College-Email = cb.en.u4cys21076@cb.students.amrita.edu"
-alias GitHubToken="echo GitHubToken= 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"
 alias TimeTable="open ~/Documents/Timetable.pdf"
