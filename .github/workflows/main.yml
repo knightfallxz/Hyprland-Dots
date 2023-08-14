@@ -1,0 +1,23 @@
+name: Update Stars Badge
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v2
+
+    - name: Update Stars Badge
+      run: |
+        stars=$(curl -s https://api.github.com/repos/knightfall01/Hyprland-i3 | jq -r .stargazers_count)
+        sed -i "s/badge\/stars-[0-9]*-brightgreen/badge\/stars-$stars-brightgreen/" README.md
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -am "Update stars badge [skip ci]"
+        git push
+      env:
+        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
