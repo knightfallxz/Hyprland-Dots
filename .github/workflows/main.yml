@@ -1,4 +1,6 @@
 name: Update Stars Badge
+name: Install jq
+uses: dcarbone/install-jq-action@v1.0.1
 
 on:
   schedule:
