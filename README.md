@@ -11,15 +11,18 @@
 ## Hypr Config 3.0
 <br>
 
-![image](https://github.com/Knightfall01/Hyprland-i3/assets/107239398/5712e1a7-b605-4075-af8b-37426930dff1)
+![image](./assets/260481160-5712e1a7-b605-4075-af8b-37426930dff1.png)
+<br>
 
+![image](./assets/screenshot%202.png)
 
+![video](./assets/recording.mp4)
 ### Tokyo Night themed Kitty Terminal Color Schemes
 
 To use the Tokyo Night color scheme for your terminal, consider removing or relocating the existing `kitty-theme.conf` file,
 and then proceed to rename the `kitty-theme.conf.tokyonight` accordingly.
 
-![image](https://github.com/Knightfall01/Hyprland-i3/assets/107239398/8e145ac3-072e-4ab6-8abf-b231b2e5ee0a)
+![image](./assets/kitty-tokyonight.png)
   
 </div>
 
@@ -28,7 +31,7 @@ and then proceed to rename the `kitty-theme.conf.tokyonight` accordingly.
 - **Compositor**: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Top Bar**: [Waybar](https://github.com/Alexays/Waybar/)
 - **Notifications**: [dunst](https://github.com/dunst-project/dunst)
-- **Wallpaper**: `/assets/wallhaven-g77rjq.jpg` `/assets/ghost.png`
+- **Wallpaper**: `/Wallpapers/samurai_strike`
 - **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Search menu**: [wofi](https://github.com/uncomfyhalomacro/wofi)
 - **Fetch script**: `Neofetch`
