@@ -1,9 +1,0 @@
-[nodejs]
-format = 'on [󰎙 $version](bold green)'
-
-[python]
-format = 'on [  $version](bold yellow)'
-
-[character]
-success_symbol = "[](bold green)"
-
