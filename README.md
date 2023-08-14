@@ -4,13 +4,8 @@
 
 <br/>
 
-# Vagabond
+## Hypr Config 3.0
   
- ![Preview-1](https://user-images.githubusercontent.com/107239398/236124614-c1055320-f5ca-4c99-96da-5165767092c1.png)
-
- ![Preview-2](https://user-images.githubusercontent.com/107239398/236126108-12e810ed-5bbd-414e-a60f-aeef9cac6171.png)
-  
-https://user-images.githubusercontent.com/107239398/236126343-307d8b9d-bf31-4a55-b4c7-7865951c7ae3.mp4
   
 </div>
 
