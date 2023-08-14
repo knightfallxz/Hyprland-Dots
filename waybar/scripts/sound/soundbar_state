@@ -1,9 +1,0 @@
-#!/bin/bash
-
-LOCK=/tmp/expand_soundbar.lock
-
-if [ -f "$LOCK" ]; then
-    echo 0
-else 
-    echo 1
-fi
