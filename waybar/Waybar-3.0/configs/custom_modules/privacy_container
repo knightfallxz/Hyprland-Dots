@@ -1,0 +1,32 @@
+{
+  "custom/left": {
+    "format": "<b>{}</b>",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/custom/privacy-test.sh l"
+  },
+  "custom/right": {
+    "format": "<b>{}</b>",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/custom/privacy-test.sh r"
+  },
+  "custom/priv-speaker": {
+    "format": "<b>{}</b>",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/custom/privacy-test.sh S"
+  },
+  "custom/priv-mic": {
+    "format": "<b>{}</b>",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/custom/privacy-test.sh M"
+  },
+  "custom/priv-cam": {
+    "format": "<b>{}</b>",
+    "tooltip": false,
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/custom/privacy-test.sh C"
+  }
+}

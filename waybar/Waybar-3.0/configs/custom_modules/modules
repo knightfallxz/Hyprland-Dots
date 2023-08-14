@@ -1,0 +1,11 @@
+{
+  "include": "./configs/custom_modules/privacy_container",
+  "custom/dot": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/dot-alt": {
+    "format": "",
+    "tooltip": false
+  },
+}
