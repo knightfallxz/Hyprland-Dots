@@ -6,6 +6,9 @@
 
 ## Hypr Config 3.0
   
+
+## Tokyo Night themed Kitty Terminl Color Schemes
+
 ![image](https://github.com/Knightfall01/Hyprland-i3/assets/107239398/8e145ac3-072e-4ab6-8abf-b231b2e5ee0a)
   
 </div>
