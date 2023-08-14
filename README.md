@@ -9,6 +9,9 @@
 
 ### Tokyo Night themed Kitty Terminal Color Schemes
 
+To use the Tokyo Night color scheme for your terminal, consider removing or relocating the existing `kitty-theme.conf` file,
+and then proceed to rename the `kitty-theme.conf.tokyonight` accordingly.
+
 ![image](https://github.com/Knightfall01/Hyprland-i3/assets/107239398/8e145ac3-072e-4ab6-8abf-b231b2e5ee0a)
   
 </div>
