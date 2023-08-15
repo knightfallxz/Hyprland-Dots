@@ -5,7 +5,6 @@
 [![Stars Badge](https://img.shields.io/github/stars/knightfall01/Hyprland-i3.svg?style=for-the-badge&color=68b0d6)](https://github.com/knightfall01/Hyprland-i3/stargazers) [![Last Commit](https://img.shields.io/github/last-commit/knightfall01/Hyprland-i3.svg?style=for-the-badge&color=68b0d6)](https://github.com/knightfall01/Hyprland-i3/commits/main) [![Repo Size](https://img.shields.io/github/repo-size/knightfall01/Hyprland-i3.svg?style=for-the-badge&color=68b0d6)](https://github.com/knightfall01/Hyprland-i3)
 
 
-
 <br/>
 
 ## Hypr Config 3.0
