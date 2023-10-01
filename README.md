@@ -17,6 +17,8 @@
 
 ![image](./assets/swappy-20231001_182925.png)
 
+https://im2.ezgif.com/tmp/ezgif-2-22a24d08fa.gif
+
 ### Tokyo Night themed Kitty Terminal Color Schemes
 
 To use the Tokyo Night color scheme for your terminal, consider removing or relocating the existing `kitty-theme.conf` file,
