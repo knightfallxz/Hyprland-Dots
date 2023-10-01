@@ -12,12 +12,10 @@
 ## Hypr Config 3.0
 <br>
 
-![image](./assets/260481160-5712e1a7-b605-4075-af8b-37426930dff1.png)
+![image](./assets/swappy-20231001_181737.png)
 <br>
 
-![image](./assets/screenshot%202.png)
-
-https://github.com/Knightfall01/Hyprland-i3/assets/107239398/b5329cb4-7e7f-47b7-92b4-edceeeeee452
+![image](./assets/swappy-20231001_182925.png)
 
 ### Tokyo Night themed Kitty Terminal Color Schemes
 
