@@ -17,7 +17,8 @@
 
 ![image](./assets/swappy-20231001_182925.png)
 
-https://im2.ezgif.com/tmp/ezgif-2-22a24d08fa.gif
+![recording](https://github.com/Knightfall01/Hyprland-i3/assets/107239398/776c7548-353e-4cf0-b7f5-2ee29336bdf5)
+
 
 ### Tokyo Night themed Kitty Terminal Color Schemes
 
