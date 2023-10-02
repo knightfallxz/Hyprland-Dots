@@ -4,8 +4,8 @@
 }
 
 window {
-  border: 3px solid #68b0d6;
-  background: #0f1113;
+  border: 3px solid #90cdfa;
+  background: #1e2030;
   border-radius: 15px;
 }
 
@@ -15,13 +15,13 @@ window {
   padding: 1em;
   border: none;
   font-weight: bold;
-  background: #0f1113;
+  background: #1e2030;
   color: #c4d3da;
   border-radius: 15px;
 }
 
 #input:focus {
-  border: 1px solid #68b0d6;
+  border: 1px solid #90cdfa;
 }
 
 #inner-box {
@@ -53,5 +53,5 @@ window {
 }
 
 #entry:selected {
-  background: linear-gradient(90deg, #668da5 0%, #68b0d6 80%);
+  background: linear-gradient(90deg, #90cdfa 0%, #b69bf1 80%);
 }
