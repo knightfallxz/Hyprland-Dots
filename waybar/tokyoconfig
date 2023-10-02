@@ -1,14 +1,18 @@
 {
   "layer": "top",
     "height": 10,
-    "modules-left": ["custom/arch", "wlr/workspaces" , "memory"],
+    "modules-left": ["custom/arch", "hyprland/workspaces" , "memory"],
     "modules-center": ["custom/playerctl"],
-    "modules-right": ["backlight","pulseaudio", "battery", "network","clock","cava"],
+    "modules-right": ["backlight","pulseaudio", "battery", "network","clock"],
     "custom/arch": {
       "format": "  ",
       "on-click": "sh /home/knightfall/.config/hypr/scripts/exec_wofi application_launcher"
     },
-    "wlr/workspaces": {
+    "custom/cava_test": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/sound/expand cava-icon"
+    },
+    "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "all-outputs": true,
@@ -25,26 +29,31 @@
 	 		    "10": []
         },
         "format-icons": {
-                "1": "",
-             		"2": "",
-             		"3": "",
-             		"4": "",
-             		"5": "",
-             		"6": "",
-             		"7": "",
-             		"8": "",
-             		"9": "",
-             		"10": "〇"
+                "1": "1",
+             		"2": "2",
+             		"3": "3",
+             		"4": "4",
+             		"5": "5",
+             		"6": "6",
+             		"7": "7",
+             		"8": "8",
+             		"9": "9",
+             		"10": "1〇"
           }
     },
     "clock": {
-      "format": "<span color='#ff005f'> </span>{:%H:%M}",
-  "format-alt": "<span foreground='#ff005f'> </span><span>{:%I:%M %p %a %d}</span>",
+      "format": "<span color='#b69bf1'> </span>{:%H:%M}",
+  "format-alt": "<span foreground='#b69bf1'> </span><span>{:%I:%M %p %a %d}</span>",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
+    "custom/cava": {
+      "format": "<span color='#f7768e'></span> {volume}%",
+      "exec": "sh ~/.config/polybar/scripts/cava.sh" ,
+      "label": "%output%"
+      },
     "backlight": {
       "device": "amdgpu_b10",
-      "format": "<span color='#ff005f'>{icon}</span> {percent}%",
+      "format": "<span color='#d9b172'>{icon}</span> {percent}%",
       "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "custom/sound": {
@@ -53,23 +62,22 @@
     },
     "network": {
       "interface": "wlo1",
-      "format": "{ifname}{signaldBm}|{bandwidthTotalBits}",
-      "format-wifi": "<span color='#ff005f'> </span>{essid}({signalStrength}%)({bandwidthTotalBits})",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#90cdfa'> </span>{essid}({signalStrength}%)",
       "format-ethernet": "{ipaddr}/{cidr} ",
       "format-disconnected": "<span color='#ff005f'>󰖪 </span>No Network",
-      "on-click": "kitty nmtui",
-      "on-click-right": "nm-connection-editor" ,
-      "interval": 7
+      "on-click": "kitty nmtui"
     },
     "battery": {
-      "format": "<span color='#ff005f'>{icon}</span> {capacity}%",
-      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-      "format-charging": "<span color='#ff005f'></span> {capacity}%"
+      "format": "<span color='#a8cd76'>{icon}</span> {capacity}%",
+      //"format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#a8cd76'></span> {capacity}%"
     },
     "pulseaudio": {
       "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "format": "<span color='#ff005f'></span> {volume}%",
-      "format-muted": "<span color='#ff005f'>ﱝ</span>",
+      "format": "<span color='#f7768e'></span> {volume}%",
+      "format-muted": "<span color='#f7768e'>ﱝ</span>",
       "format-icons": {
        "headphone": "",
        "hands-free": "",
@@ -82,37 +90,8 @@
     "on-click-right" : "pavucontrol"
     },
     "memory": {
-    "format": "<span foreground='#ff005f'></span> {}%",
+    "format": "<span foreground='#9ece6a'></span> {}%",
     "on-click": "kitty htop"
-    },
-    "cava": {
-    "framerate": 30,
-    "autosens": 0,
-    "sensitivity": 70,
-    "bars": 18,
-    "method": "pipewire",
-    "source": "auto",
-    "stereo": true,
-    "reverse": false,
-    "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.3,
-    "input_delay": 2,
-    "sleep_timer": 15,
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
-    "actions": {
-      "on-click-right": "mode"
-    }
     },
     "tray": {
     "icon-size": 20,
@@ -135,11 +114,10 @@
      "on-click": "playerctl play-pause",
      "on-click-right": "playerctl next",
      "format-icons": {
-       "Paused": "<span foreground='#ff005f'></span>",
-       "Playing": "<span foreground='#ff005f'></span>"
+       "Paused": "<span foreground='#bb9af7'></span>",
+       "Playing": "<span foreground='#bb9af7'></span>"
      }
      }
 
 }
-
 

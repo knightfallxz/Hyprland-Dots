@@ -13,9 +13,8 @@ window#waybar {
 
 #custom-arch, #workspaces {
   border-radius: 10px;
-  background-color: #0f1014; 
-  color: #ff005f;
-  /* color: #0f1014; */
+  background-color: #191a24;
+  color: #c0caf5;
   margin-top: 15px;
 	margin-right: 15px;
   padding-top: 1px;
@@ -29,18 +28,18 @@ window#waybar {
 }
 
 #workspaces button {
-  background: #0f1014;
-  color: #323c43;
+  background: #191a24;
+  color: #c0caf5;
 }
 
 #workspaces button.active {
-  color: #ff005f;
+  color: #2ac3de;
 }
 
-#clock, #backlight, #custom-info-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl, #cava{
+#clock, #backlight, #custom-cava,#temperature, #cpu, #pulseaudio, #network, #battery , #tray, #memory ,#custom-playerctl{
   border-radius: 10px;
-  background-color: #0f1014;
-  color: #ff005f;
+  background-color: #191a24;
+  color: #c0caf5;
   margin-top: 15px;
   padding-left: 9px;
   padding-right: 9px;
@@ -84,5 +83,4 @@ window#waybar {
 /*   padding-left: 10px; */
 /*   padding-right: 10px; */
 /* } */
-
 

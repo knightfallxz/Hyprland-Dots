@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+# grim -g "$(slurp)" - | wl-copy
+grim -t jpeg -q 100  -g "$(slurp)" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).jpeg
+# grim -g "0,0 2048x1280" - | swappy -f - -o ~/Pictures/Screenshots/screenshot$(date +%s).png
