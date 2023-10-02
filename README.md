@@ -1,3 +1,6 @@
+<!-- # By knightfall01 on Github as a part of https://github.com/Knightfall01/Hyprland-config -->
+
+
 <div align="center">
 
 # 💠 Dot Files - Hypr Config 3.0 💠

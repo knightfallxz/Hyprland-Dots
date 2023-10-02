@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# By knightfall01 on Github as a part of https://github.com/Knightfall01/Hyprland-config
 # Connect to WIFI
 # Modified from https://github.com/zbaylin/rofi-wifi-menu/blob/master/rofi-wifi-menu.sh
 
