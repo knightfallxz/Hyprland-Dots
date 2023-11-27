@@ -12,39 +12,40 @@
     "custom/separator",
     "cpu",
     "memory",
-    "custom/window-name",
-    "custom/dot-alt",
     "temperature",
-    "custom/dot",
+    "custom/filler",
+    "custom/playerctl",
+    "custom/filler",
     "disk",
-    "custom/pacman",
-    "custom/uptime"
+    "custom/filler",
+    "custom/pacman"
   ],
-  "modules-center": ["wlr/workspaces"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "battery",
+    "custom/dot",
     "backlight",
     "pulseaudio",
-    "custom/right-arr",
+    "custom/dot",
     "custom/separator",
     "network",
-    "custom/clock-icon",
+    "custom/dot",
     "clock"
-  ],
+  ], 
   "custom/playerctl": {
-     "format": "{icon}  <span>{}</span>",
-     "return-type": "json",
-     "max-length": 55,
-     "exec": "playerctl -a metadata --format '{\"text\": \"  {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-     "on-click-middle": "playerctl previous",
-     "on-click": "playerctl play-pause",
-     "on-click-right": "playerctl next",
-     "format-icons": {
-       "Paused": "<span foreground='#ff005f'></span>",
-       "Playing": "<span foreground='#ff005f'></span>"
-     }
-     },
-     "custom/uptime": {
+      "format": "[<span foreground='#46c880'>  </span> <span>{}</span> ]",
+      "return-type": "json",
+      "max-length": 55,
+      "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}\"}' -F",
+      "on-click": "playerctl play-pause",
+      "on-click-middle": "playerctl previous",
+      "on-click-right": "playerctl next",
+      "format-icons": {
+        "Playing": "<span foreground='#46c880'>  </span>",
+        "Paused": "<span foreground='#cdd6f4'> 󰏥 </span>",
+      },
+    },
+    "custom/uptime": {
     "format": " {}",
     "interval": 30,
     "exec": "$HOME/.local/bin/upt2",
@@ -52,11 +53,11 @@
   },
      "disk": {
     "interval": 1,
-    "format": "<span color=\"#68b0d6\"> </span> {}% ",
+    "format": "<span color=\"#68b0d6\"> </span> {}%",
     "on-click": "filelight /",
     "on-click-right": "filelight /home/"
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "all-outputs": true,
     "active-only": false,
     "on-click": "activate",
@@ -78,13 +79,15 @@
       "default": ""
     }
   },
-
   "tray": {
     "icon-size": 20,
     "spacing": 8
   },
   "custom/filler": {
-    "format": ""
+    "format": " "
+  },
+  "custom/dot": {
+    "format": " "
   },
   "custom/clock-icon": {
     "format": ""
@@ -100,14 +103,14 @@
     "interval": 10,
     "format": " {usage}% ",
     "max-length": 10,
-    "on-click": "btop"
+    "on-click": "htop"
   },
   "memory": {
     "interval": 30,
     "format": " {}% ",
     "format-alt": " {used:0.1f}G",
     "max-length": 10,
-    "on-click-right": "btop"
+    "on-click-right": "htop"
   },
   "backlight": {
     "device": "amdgpu_bl1",
@@ -139,12 +142,12 @@
   },
   "battery": {
     "bat": "BAT0",
-    "interval": 30,
+    "interval": 10,
     "states": {
       "warning": 30,
       "critical": 15
     },
-    "format": " {icon} {capacity}% ",
+    "format": " {icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-icons": ["", "", "", "", "", "", "", "", "", ""],
     "max-length": 25,
@@ -154,7 +157,7 @@
     "format": "  "
   },
   "custom/launcher": {
-    "format": "  󰣇"
+    "format": " 󰣇"
   },
   "custom/separator": {
     "format": " "
@@ -187,7 +190,7 @@
     "thermal-zone": 0,
     "critical-threshold": 80,
     "format-critical": " {temperatureC}°C",
-    "format": "  {temperatureC}°C"
+    "format": " {temperatureC}°C"
   },
 
   "custom/wrap-left": {

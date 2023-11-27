@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgba(30,32,48,1); /* Reduced opacity background */ 
+}
+
+.modules-right {
+  border-radius: 5px 0px 0px 5px;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #90cdfa; 
+}
+
+#custom-launcher {
+  font-size: 20px;
+  color: #00bfff;
+  padding-right: 10px;
+  background-color: rgba(30,32,48,1);
+}
+
+#cpu,
+#memory,
+#temperature {
+  font-size: 15px;
+  background: #363a4f;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#cpu {
+  color: #eed49f;
+  padding: 0px 10px 0px 12px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#memory {
+  color: #a6da95;
+  padding: 0px 10px 0px 0px;
+}
+
+#temperature {
+  color: #8aadf4;
+  padding: 0px 12px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#custom-window-name {
+  color: #68b0d6;
+  margin-right: 10px;
+  background-color: rgba(30,32,48,1);
+}
+
+#custom-pacman-update-icon {
+  background-color: #68b0d6;
+  color: #181926;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* ... (other styles) ... */
+
+#clock {
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
+
