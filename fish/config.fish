@@ -8,9 +8,9 @@ set -U fish_greeting ""
 cat ~/.cache/wal/sequences
 sh ~/.bin/colorscripts/crunchbang-mini
 
-fish_add_path ~/.bin/
-fish_add_path ~/.config/emacs/bin/
-fish_add_path ~/.local/bin/
+# fish_add_path ~/.bin/
+# fish_add_path ~/.config/emacs/bin/
+# fish_add_path ~/.local/bin/
 
 alias l="ls -lh"
 # alias ls="exa"
